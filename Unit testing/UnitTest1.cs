@@ -46,5 +46,21 @@ namespace Unit_testing
 
 
         }
+
+        [TestMethod]
+        public void testMultiplicarMetodoPublicoFaccion()
+        {
+            Fraccion F1 = new Fraccion(2,3);
+            Fraccion F2 = new Fraccion(2,3);
+            Fraccion Result = new Fraccion();
+            Result.setOperador('*');
+            Result.Multiplicar(F1, F2);
+
+            char operador = Result.getOperador();
+            bool b = (Result.getNumerador() == 4) && (Result.getDenominador() == 9) && (Result.getOperador()=='*');
+
+            Assert.AreEqual(true,b);
+         
+        }
     }
 }
