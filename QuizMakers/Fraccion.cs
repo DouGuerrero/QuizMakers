@@ -53,5 +53,11 @@ namespace QuizMakers
             this._numerador = F1._numerador * F2._numerador;
             this._denominador = F1._denominador * F2._denominador;
         }
+
+        public void Restar(Fraccion F1, Fraccion F2)
+        {
+            this._numerador = (F1._numerador * F2._denominador) - (F2._numerador * F1._denominador);
+            this._denominador = F1._denominador * F2._denominador;
+        }
     }
 }
