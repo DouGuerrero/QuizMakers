@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,6 +55,14 @@ namespace QuizMakers
             this._denominador = F1._denominador * F2._denominador;
         }
 
+          public void Dividir(Fraccion F1, Fraccion F2)
+        {
+            
+             this._numerador = F1._numerador * F2._denominador;
+             this._denominador = F1._denominador * F2._numerador;
+          
+        }
+
         public void Restar(Fraccion F1, Fraccion F2)
         {
             this._numerador = (F1._numerador * F2._denominador) - (F2._numerador * F1._denominador);
@@ -61,3 +70,4 @@ namespace QuizMakers
         }
     }
 }
+
