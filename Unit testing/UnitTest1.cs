@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QuizMakers;
 
@@ -77,5 +77,22 @@ namespace Unit_testing
             Assert.AreEqual(true,b);
          
         }
+
+        [TestMethod]
+         public void testDividirMetodoPublicodeFracciones()
+        {
+            Fraccion F1 = new Fraccion(1, 3);
+            Fraccion F2 = new Fraccion(2, 3);
+            Fraccion Resultado = new Fraccion();
+            Resultado.setOperador('/');
+            Resultado.Dividir(F1, F2);
+
+            char operador = Resultado.getOperador();
+            bool b = (Resultado.getNumerador() == 3) && (Resultado.getDenominador() == 6) && Resultado.getOperador()=='/';
+
+            Assert.AreEqual(true, b);
+
+        }
     }
 }
+
