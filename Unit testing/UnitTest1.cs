@@ -35,6 +35,21 @@ namespace Unit_testing
         }
 
         [TestMethod]
+        public void testRestarMetodoPublicodeFracciones()
+        {
+            Fraccion F1 = new Fraccion(1, 3);
+            Fraccion F2 = new Fraccion(2, 3);
+            Fraccion Resultado = new Fraccion();
+            Resultado.setOperador('-');
+            Resultado.Restar(F1, F2);
+
+            bool b = (Resultado.getNumerador() == 3) && (Resultado.getDenominador() == 9) && (Resultado.getOperador()=='-');
+
+            Assert.AreEqual(true, b);
+
+        }
+
+        [TestMethod]
         public void testConstructorDefaultProblema()
         {
             Problema P = new Problema();
