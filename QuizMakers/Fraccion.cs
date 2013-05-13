@@ -39,9 +39,10 @@ namespace QuizMakers
             return this._denominador;
         }
 
-        public int Sumar(Fraccion f1, Fraccion f2)
+        public void Sumar(Fraccion f1, Fraccion f2)
         {
-            return 0;
+            this._numerador = (f1._numerador * f2._denominador) + (f2._numerador * f1._denominador);
+            this._denominador = f1._denominador * f2._denominador;
         }
 
         public char getOperador()
