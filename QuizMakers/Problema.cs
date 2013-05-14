@@ -8,6 +8,10 @@ namespace QuizMakers
 {
     public class Problema
     {
+        public Problema() 
+        {
+            
+        }
         public Fraccion getOperando1()
         {
             throw new NotImplementedException();

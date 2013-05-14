@@ -23,12 +23,15 @@ namespace Unit_testing
         [TestMethod]
         public void testSumarMetodoPublicodeFracciones()
         {
-            Fraccion F1 = new Fraccion(1,3);
+            Fraccion F1 = new Fraccion(6,2);
+            F1.setSigno('+');
             Fraccion F2 = new Fraccion(2,3);
+            F2.setSigno('-');
             Fraccion Resultado = new Fraccion();
             Resultado.Sumar(F1,F2);
+            Resultado.SimboloResultante(F1,F2,'+');
 
-            bool b = (Resultado.getNumerador() == 9) && (Resultado.getDenominador() == 9);
+            bool b = (Resultado.getNumerador() == 14) && (Resultado.getDenominador() == 6) && (Resultado.getSigno() == '+');
 
             Assert.AreEqual(true, b);
 
@@ -37,13 +40,15 @@ namespace Unit_testing
         [TestMethod]
         public void testRestarMetodoPublicodeFracciones()
         {
-            Fraccion F1 = new Fraccion(1, 3);
+            Fraccion F1 = new Fraccion(6, 2);
+            F1.setSigno('-');
             Fraccion F2 = new Fraccion(2, 3);
+            F2.setSigno('-');
             Fraccion Resultado = new Fraccion();
             Resultado.setOperador('-');
             Resultado.Restar(F1, F2);
-
-            bool b = (Resultado.getNumerador() == 3) && (Resultado.getDenominador() == 9) && (Resultado.getOperador()=='-');
+            Resultado.SimboloResultante(F1, F2, '-');
+            bool b = (Resultado.getNumerador() == 14) && (Resultado.getDenominador() == 6) && (Resultado.getSigno() == '-');
 
             Assert.AreEqual(true, b);
 
@@ -66,13 +71,14 @@ namespace Unit_testing
         public void testMultiplicarMetodoPublicoFaccion()
         {
             Fraccion F1 = new Fraccion(2,3);
+            F1.setSigno('-');
             Fraccion F2 = new Fraccion(2,3);
+            F2.setSigno('-');
             Fraccion Result = new Fraccion();
             Result.setOperador('*');
             Result.Multiplicar(F1, F2);
-
-            char operador = Result.getOperador();
-            bool b = (Result.getNumerador() == 4) && (Result.getDenominador() == 9) && (Result.getOperador()=='*');
+            Result.SimboloResultante(F1, F2, '*');
+            bool b = (Result.getNumerador() == 4) && (Result.getDenominador() == 9) && (Result.getSigno() == '+');
 
             Assert.AreEqual(true,b);
          
@@ -82,14 +88,26 @@ namespace Unit_testing
          public void testDividirMetodoPublicodeFracciones()
         {
             Fraccion F1 = new Fraccion(1, 3);
+            F1.setSigno('-');
             Fraccion F2 = new Fraccion(2, 3);
+            F2.setSigno('-');
             Fraccion Resultado = new Fraccion();
             Resultado.setOperador('/');
             Resultado.Dividir(F1, F2);
-
+            Resultado.SimboloResultante(F1,F2,'/');
             char operador = Resultado.getOperador();
-            bool b = (Resultado.getNumerador() == 3) && (Resultado.getDenominador() == 6) && Resultado.getOperador()=='/';
+            bool b = (Resultado.getNumerador() == 3) && (Resultado.getDenominador() == 6) && Resultado.getSigno() == '+';
 
+            Assert.AreEqual(true, b);
+
+        }
+
+        [TestMethod]
+        public void testSimplificarMetodoPublicodeFraccionesa()
+        {
+            Fraccion F1 = new Fraccion(12, 6);
+            F1.Simplificar();
+            bool b = F1.getNumerador() == 2 && F1.getDenominador() == 1;
             Assert.AreEqual(true, b);
 
         }
