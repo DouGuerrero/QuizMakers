@@ -11,7 +11,6 @@ namespace QuizMakers
     {
         private int _numerador;
         private int _denominador;
-        private char _operador;
         private char _signo;
 
         public Fraccion(int num, int denom)
@@ -25,17 +24,15 @@ namespace QuizMakers
             _numerador = 1;
             _denominador = 1;
         }
+        
         public void setSigno(char signo) 
         {
             this._signo = signo;
         }
+
         public char getSigno() 
         {
             return this._signo;
-        }
-        public void setOperador(char operando) 
-        {
-            this._operador = operando;        
         }
 
         public int getNumerador()
@@ -50,10 +47,11 @@ namespace QuizMakers
 
         public void Sumar(Fraccion F1, Fraccion F2)
         {
-            if (F1.getSigno() == F2.getSigno())
+            if (F1._signo == F2._signo)
             {
-                this._numerador = (F1.getNumerador() * F2.getDenominador()) + (F2.getNumerador() * F1.getDenominador());
-                this._denominador = F1.getDenominador() * F2.getDenominador();
+                this._numerador = (F1._numerador * F2._denominador) + (F2._numerador * F1._denominador);
+                this._denominador = F1._denominador * F2._denominador;
+                this._signo = F1._signo;
             }
             else 
             {
@@ -66,11 +64,26 @@ namespace QuizMakers
             {
                 this._numerador = (F1.getNumerador() * F2.getDenominador()) - (F2.getNumerador() * F1.getDenominador());
                 this._denominador = F1.getDenominador() * F2.getDenominador();
+                if (F1._signo == '-' && F2._signo == '+')
+                {
+                    if (F1.SoyMayorQue(F2))
+                        this._signo = '-';
+                    else
+                        this._signo = '+';
+                }
+                if (F1._signo == '+' && F2._signo == '-')
+                {
+                    if (F1.SoyMayorQue(F2))
+                        this._signo = '+';
+                    else
+                        this._signo = '-';
+                }
             }
-            else if (F1.getSigno() == '-' && F2.getSigno() == '-' && this._operador == '-')
+            else if (F1.getSigno() == '-' && F2.getSigno() == '-')
             {
                 this._numerador = (F1.getNumerador() * F2.getDenominador()) - (F2.getNumerador() * F1.getDenominador());
                 this._denominador = F1.getDenominador() * F2.getDenominador();
+                this._signo = '-';
             }
             else 
             {
@@ -78,53 +91,6 @@ namespace QuizMakers
             }
         }
 
-        public void SimboloResultante(Fraccion F1, Fraccion F2, char operacion)
-        {
-            if ((F1.getSigno() == '-' && F2.getSigno() == '-') 
-                && (operacion == '-' || operacion == '+' || operacion == '*' || operacion == '/'))
-            {
-                if(operacion == '*' || operacion == '/')
-                    this._signo = '+';
-                else
-                    this._signo = '-';
-            }
-            if ((F1.getSigno() == '+' && F2.getSigno() == '+')
-                && (operacion == '-' || operacion == '+' || operacion == '*' || operacion == '/'))
-            {
-                this._signo = '+';
-            }
-            if ((F1.getSigno() == '-' && F2.getSigno() == '+')
-                && (operacion == '-' || operacion == '+' || operacion == '*' || operacion == '/'))
-            {
-                if (operacion == '-' || operacion == '+')
-                {
-                    if (F1.SoyMayorQue(F2))
-                        this._signo = '-';
-                    else
-                        this._signo = '+';
-                }
-                else 
-                {
-                    this._signo = '-';                
-                }  
-            }
-            if ((F1.getSigno() == '+' && F2.getSigno() == '-')
-                && (operacion == '-' || operacion == '+' || operacion == '*' || operacion == '/'))
-            {
-                if (operacion == '-' || operacion == '+')
-                {
-                    if (F1.SoyMayorQue(F2))
-                        this._signo = '+';
-                    else
-                        this._signo = '-';
-                }
-                else
-                {
-                    this._signo = '-';
-                }  
-            }
-        
-        }
         private bool SoyMayorQue(Fraccion F)
         {
             double fraccion1, fraccion2;
@@ -133,26 +99,33 @@ namespace QuizMakers
             return (fraccion2 > fraccion1) ? true : false;
         }
 
-        public char getOperador()
-        {
-            return this._operador;
-        }
-
         public void Multiplicar(Fraccion F1, Fraccion F2)
         {
             this._numerador = F1._numerador * F2._numerador;
             this._denominador = F1._denominador * F2._denominador;
+            if (F1._signo != F2._signo)
+            {
+                this._signo = '-';
+            }
+            else 
+            {
+                this._signo = '+';
+            }
         }
 
-          public void Dividir(Fraccion F1, Fraccion F2)
+        public void Dividir(Fraccion F1, Fraccion F2)
         {
-            
-             this._numerador = F1._numerador * F2._denominador;
-             this._denominador = F1._denominador * F2._numerador;
-          
+            this._numerador = F1._numerador * F2._denominador;
+            this._denominador = F1._denominador * F2._numerador;
+            if (F1._signo != F2._signo)
+            {
+                this._signo = '-';
+            }
+            else
+            {
+                this._signo = '+';
+            }
         }
-
-
 
         public void Simplificar() 
         {
@@ -164,12 +137,12 @@ namespace QuizMakers
                     this._numerador = this._numerador / i;
                     this._denominador = this._denominador / i;
                 }
-                else {
+                else 
+                {
                     i++;
                 }
             }
         }
-
     }
 }
 
