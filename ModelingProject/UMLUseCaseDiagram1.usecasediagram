@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="0d2c5dd7-5d3d-4a44-a198-ab15804e14b0" name="UMLUseCaseDiagram1" linkedPackageId="710570dd-3cd1-45de-971a-6b6abb312bcf" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="d047e27d-ca85-46d5-8fdd-5cd8c5a464ba">
+      <elementDefinition Id="53712231-da5e-4369-a182-680016872698" />
+      <body>Al suceder este caso, se finalizara la prueba actual y comenzara a crear una nueva prueba.</body>
+      <annotatedElements>
+        <useCaseMoniker Id="3cecca14-cf5e-4803-b843-e41f67d45bd6" LastKnownName="Crear Otra Prueba" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="c2f1797a-396f-4b6f-8412-f583825377e8">
+      <profileInstance Id="69a653e0-6216-473b-b883-bbfe8ea01ca7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ee971a01-cabc-4044-8708-37ce01bc5433">
+      <profileInstance Id="88db62a6-33e2-400b-bfb0-f5890dd84ff7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="2c36fea8-6ce6-4baa-985e-66b338699970" name="Usuario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58415ea7-4c24-4147-af44-3b7076f3b371" />
+        <targetEnds>
+          <association Id="27dab614-3280-4c7a-aaa6-79adaf5f586c" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Crear Test" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="eee22101-e6c4-42cf-97b7-8341371eddaa" LastKnownName="Crear Prueba" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f4e32cbe-f72d-47f0-9d10-9c26759a523e" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="680e3c2c-ad2c-4491-a8a5-e5b5835bcc56" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ec56b1a2-4fc0-45dc-949c-557fb8064989" name="Crear Test" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="825227ac-f976-4cfc-8bd0-c8246b89c0e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="60910502-35fa-4c96-9ade-5a438b047bb7" />
+          </association>
+          <association Id="ad83b0ca-3299-496d-bd80-df64b8a7cbff" isDerived="false" sourceEndRoleName="Usuario" targetEndRoleName="Ver Scores" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d7ad72d9-1a09-4296-9528-6117a0f94873" LastKnownName="Ver Puntajes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed946326-be70-4b62-9262-36623525754e" name="Usuario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="685bbd7d-c252-4ba1-9d8b-3950ab673ded" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="96868ac9-1cc7-4344-9edc-8a5f7b68ea81" name="Ver Scores" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d180089a-6e97-4709-986c-9f99f77def0c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1fdda8ad-55ab-4465-b06e-402614925218" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="eee22101-e6c4-42cf-97b7-8341371eddaa" name="Crear Prueba" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0b075944-5c5a-48e6-9e72-2309c04cd8b0" />
+        <additions>
+          <include Id="be74d09a-4351-4fbd-a7bc-60e0efa7bd75">
+            <useCaseMoniker Id="e2f7de10-c8ec-459b-9254-fc94a77fb001" LastKnownName="Iniciar Prueba" />
+            <elementDefinition Id="6767cd72-4bc7-45ca-ae9c-f5a0f9550264" />
+          </include>
+          <include Id="2e6de150-fe09-4eb3-b239-732110b649f9">
+            <useCaseMoniker Id="6af2b3ad-1bf6-458d-a71c-1ab0fd717f03" LastKnownName="Escoger Nivel" />
+            <elementDefinition Id="cd935db7-fde6-46cf-9ab1-da20bfc801bc" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d7ad72d9-1a09-4296-9528-6117a0f94873" name="Ver Puntajes" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5be35c58-21e5-4bc6-af08-2798065a213c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6af2b3ad-1bf6-458d-a71c-1ab0fd717f03" name="Escoger Nivel" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="49ce2bb8-fb48-4072-877f-5e09b2669e36" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e2f7de10-c8ec-459b-9254-fc94a77fb001" name="Iniciar Prueba" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b3b02478-3731-4b07-99f2-56861a03dd33" />
+        <additions>
+          <include Id="92d63b57-e811-4b78-8d4f-19659c831418">
+            <useCaseMoniker Id="114afbb4-cd80-4058-9df1-2457e365307a" LastKnownName="Resolver Prueba" />
+            <elementDefinition Id="03acf933-d28b-4fdd-abae-d2ac33aea4ab" />
+          </include>
+          <include Id="d6318a2f-2b36-4bb5-aa79-d5b2ce0fbed5">
+            <useCaseMoniker Id="8283f0c9-197e-429b-a5b1-a774d42889da" LastKnownName="Finalizar Prueba" />
+            <elementDefinition Id="3b6e3c03-3358-4a7e-be55-8947f64f4fa3" />
+          </include>
+          <include Id="d55e62a3-c293-4abc-b1f5-b49fcb4d85e2">
+            <useCaseMoniker Id="16ac40a3-6939-4aa2-864f-d5a1dfc67705" LastKnownName="Ir a la Siguiente Pregunta" />
+            <elementDefinition Id="e2928a6c-d854-4768-8f43-ef02ff07cc3b" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0324437e-9f27-41fb-8224-f3d8a4b969b5" name="Escoger Numero de Preguntas " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a6f90792-8698-4c3e-b138-94a6f4c9d678" />
+        <extendedCases>
+          <extend Id="d0729343-732b-4cba-90ec-2a981e92f54b">
+            <useCaseMoniker Id="eee22101-e6c4-42cf-97b7-8341371eddaa" LastKnownName="Crear Prueba" />
+            <elementDefinition Id="c6e35f3c-e47a-47a5-9181-5663f8051173" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="114afbb4-cd80-4058-9df1-2457e365307a" name="Resolver Prueba" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c77f413e-40bc-47cf-8f33-c209656c61bc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="604532f9-03ea-40c6-8823-5d1b76e4063d" name="Ingresar Tiempo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9c635e32-a960-4221-ae95-b8b8f97ec024" />
+        <extendedCases>
+          <extend Id="4da0ee4e-b86a-43c9-9bd2-d6c7b52558a3">
+            <useCaseMoniker Id="eee22101-e6c4-42cf-97b7-8341371eddaa" LastKnownName="Crear Prueba" />
+            <elementDefinition Id="5fbb3b7d-3d36-4167-8576-fb562a8a759c" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8283f0c9-197e-429b-a5b1-a774d42889da" name="Finalizar Prueba" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fb0ea680-e44a-4fc7-8a2b-8fa312ae1b62" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3cecca14-cf5e-4803-b843-e41f67d45bd6" name="Crear Otra Prueba" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c57aebc9-1a0c-4614-ba65-da678b0aad8e" />
+        <extendedCases>
+          <extend Id="9c48207c-928b-40a7-8e9a-c723dee6901c">
+            <useCaseMoniker Id="8283f0c9-197e-429b-a5b1-a774d42889da" LastKnownName="Finalizar Prueba" />
+            <elementDefinition Id="cfe1cbb7-2065-4a2e-9b5d-e1edae1682d4" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="16ac40a3-6939-4aa2-864f-d5a1dfc67705" name="Ir a la Siguiente Pregunta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e58ddc4a-6f63-4909-ab29-f48e3d3a1a3b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="710570dd-3cd1-45de-971a-6b6abb312bcf" name="ModelingProject">
+    <elementDefinition Id="f0a695f2-6ce3-440c-a7a4-f2a4822d6101" />
+  </package>
+</useCaseModelRoot>

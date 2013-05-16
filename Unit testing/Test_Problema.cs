@@ -37,12 +37,17 @@ namespace Unit_testing
         [TestMethod]
         public void testConstructorDefaultProblema()
         {
-            Problema P = new Problema();
-
-            Fraccion op1 = P.getOperando1();
-            Fraccion op2 = P.getOperando2();
+            Problema P = new Problema(1);
+            Fraccion F1 = P.getFraccion_Der();
+            Fraccion F2 = P.getFraccion_Izq();
             char operador = P.getOperador();
-            Fraccion result = P.getResultado();
+
+            bool b1 = (F1 == null) ? false : true;
+            bool b2 = (F2 == null) ? false : true;
+            bool o = (operador == 'n') ? false : true;
+            Assert.AreEqual(true, o);
+            Assert.AreEqual(true, b1);
+            Assert.AreEqual(true, b2);
         }
     }
 }

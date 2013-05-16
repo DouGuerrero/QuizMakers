@@ -39,10 +39,18 @@ namespace QuizMakers
         {
             return this._numerador;
         }
+        public void setNumerador(int numerador) 
+        {
+            this._numerador = numerador;
+        }
 
         public int getDenominador()
         {
             return this._denominador;
+        }
+        public void setDenominador(int denominador)
+        {
+            this._denominador = denominador;
         }
 
         public void Sumar(Fraccion F1, Fraccion F2)

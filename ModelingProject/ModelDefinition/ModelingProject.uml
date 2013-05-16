@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="f0a695f2-6ce3-440c-a7a4-f2a4822d6101"
+  name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="53712231-da5e-4369-a182-680016872698">
+      <body>Al suceder este caso, se finalizara la prueba actual y comenzara a crear una nueva prueba.</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="c57aebc9-1a0c-4614-ba65-da678b0aad8e"
+          LastKnownName="Crear Otra Prueba"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="58415ea7-4c24-4147-af44-3b7076f3b371"
+        name="Usuario"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="f4a53044-0ec0-44d2-94bf-34778123917c"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Formulario"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="343fb42b-1467-4c03-9d6b-4df91d833f4c"
+              LastKnownName="Formulario"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ef9deb55-d770-4499-b476-697718bf89c4"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="898e3003-a792-4387-a83f-cf75f0259997"
+                  name="Formulario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="60910502-35fa-4c96-9ade-5a438b047bb7"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Crear Test"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0b075944-5c5a-48e6-9e72-2309c04cd8b0"
+              LastKnownName="Crear Prueba"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="680e3c2c-ad2c-4491-a8a5-e5b5835bcc56"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="825227ac-f976-4cfc-8bd0-c8246b89c0e2"
+                  name="Crear Test"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1fdda8ad-55ab-4465-b06e-402614925218"
+            isDerived="false"
+            sourceEndRoleName="Usuario"
+            targetEndRoleName="Ver Scores"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5be35c58-21e5-4bc6-af08-2798065a213c"
+              LastKnownName="Ver Puntajes"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="685bbd7d-c252-4ba1-9d8b-3950ab673ded"
+                  name="Usuario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d180089a-6e97-4709-986c-9f99f77def0c"
+                  name="Ver Scores"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="343fb42b-1467-4c03-9d6b-4df91d833f4c"
+        name="Formulario"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7e012012-552b-4321-995c-2796b8ac2cc3"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0b075944-5c5a-48e6-9e72-2309c04cd8b0"
+        name="Crear Prueba"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6767cd72-4bc7-45ca-ae9c-f5a0f9550264">
+            <useCaseMoniker
+              Id="b3b02478-3731-4b07-99f2-56861a03dd33"
+              LastKnownName="Iniciar Prueba"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+          <include
+            Id="cd935db7-fde6-46cf-9ab1-da20bfc801bc">
+            <useCaseMoniker
+              Id="49ce2bb8-fb48-4072-877f-5e09b2669e36"
+              LastKnownName="Escoger Nivel"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5be35c58-21e5-4bc6-af08-2798065a213c"
+        name="Ver Puntajes"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="49ce2bb8-fb48-4072-877f-5e09b2669e36"
+        name="Escoger Nivel"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b3b02478-3731-4b07-99f2-56861a03dd33"
+        name="Iniciar Prueba"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="8b6b58b4-653d-453c-b258-15d0738480a3">
+            <useCaseMoniker
+              Id="2b0db9af-15b8-44e5-bd48-50e96a8c409e"
+              LastKnownName="Responder Pregunta"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+          <include
+            Id="03acf933-d28b-4fdd-abae-d2ac33aea4ab">
+            <useCaseMoniker
+              Id="c77f413e-40bc-47cf-8f33-c209656c61bc"
+              LastKnownName="Resolver Prueba"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+          <include
+            Id="1fee4917-6f9a-4c29-8824-710c7f83c6b6">
+            <useCaseMoniker
+              Id="45c208c7-4135-48b3-85a5-32ba80a80514"
+              LastKnownName="Finalizar Prueba"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+          <include
+            Id="3b6e3c03-3358-4a7e-be55-8947f64f4fa3">
+            <useCaseMoniker
+              Id="fb0ea680-e44a-4fc7-8a2b-8fa312ae1b62"
+              LastKnownName="Finalizar Prueba"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+          <include
+            Id="e2928a6c-d854-4768-8f43-ef02ff07cc3b">
+            <useCaseMoniker
+              Id="e58ddc4a-6f63-4909-ab29-f48e3d3a1a3b"
+              LastKnownName="Ir a la Siguiente Pregunta"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a6f90792-8698-4c3e-b138-94a6f4c9d678"
+        name="Escoger Numero de Preguntas "
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c6e35f3c-e47a-47a5-9181-5663f8051173">
+            <useCaseMoniker
+              Id="0b075944-5c5a-48e6-9e72-2309c04cd8b0"
+              LastKnownName="Crear Prueba"
+              LastKnownLocation="ModelingProject.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2b0db9af-15b8-44e5-bd48-50e96a8c409e"
+        name="Responder Pregunta"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="3b0eded9-33ae-4c38-9f42-8b1167cfca23">
+            <useCaseMoniker
+              Id="a6024161-a316-4643-901e-196f3a255f3f"
+              LastKnownName="Siguiente Pregunta"
+              LastKnownLocation="ModelingProject.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a6024161-a316-4643-901e-196f3a255f3f"
+        name="Siguiente Pregunta"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d6f6c363-4198-4a0d-9f0e-5f31d76eed8b"
+        name="Finalizar Prueba"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="3a98c839-d9f2-4d39-8583-4fd633ed6ea7">
+            <useCaseMoniker
+              Id="2b0db9af-15b8-44e5-bd48-50e96a8c409e"
+              LastKnownName="Responder Pregunta"
+              LastKnownLocation="ModelingProject.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="45c208c7-4135-48b3-85a5-32ba80a80514"
+        name="Finalizar Prueba"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c77f413e-40bc-47cf-8f33-c209656c61bc"
+        name="Resolver Prueba"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9c635e32-a960-4221-ae95-b8b8f97ec024"
+        name="Ingresar Tiempo"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="5fbb3b7d-3d36-4167-8576-fb562a8a759c">
+            <useCaseMoniker
+              Id="0b075944-5c5a-48e6-9e72-2309c04cd8b0"
+              LastKnownName="Crear Prueba"
+              LastKnownLocation="ModelingProject.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fb0ea680-e44a-4fc7-8a2b-8fa312ae1b62"
+        name="Finalizar Prueba"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c57aebc9-1a0c-4614-ba65-da678b0aad8e"
+        name="Crear Otra Prueba"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="6affcbb8-531b-4789-a70a-b3f0756d5807"
+            isDerived="false"
+            sourceEndRoleName="Crear Otra Prueba"
+            targetEndRoleName="Artifact1"
+            isLeaf="false"
+            isAbstract="false">
+            <artifactMoniker
+              Id="29dd1f34-b44b-4008-8b72-8fd847e0d735"
+              LastKnownName="Artifact1"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a01b6eb-df05-42c4-8577-f64ea245dc42"
+                  name="Crear Otra Prueba"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d92edc60-1679-458f-b4cc-ea48874a1d84"
+                  name="Artifact1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <extendedCases>
+          <extend
+            Id="cfe1cbb7-2065-4a2e-9b5d-e1edae1682d4">
+            <useCaseMoniker
+              Id="fb0ea680-e44a-4fc7-8a2b-8fa312ae1b62"
+              LastKnownName="Finalizar Prueba"
+              LastKnownLocation="ModelingProject.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="29dd1f34-b44b-4008-8b72-8fd847e0d735"
+        name="Artifact1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e58ddc4a-6f63-4909-ab29-f48e3d3a1a3b"
+        name="Ir a la Siguiente Pregunta"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
